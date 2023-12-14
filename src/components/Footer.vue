@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--secondary)
   }
 
   footer p {

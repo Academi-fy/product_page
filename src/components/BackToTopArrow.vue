@@ -27,8 +27,8 @@ onMounted(() => {
 <style scoped>
 
 #to-top {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -40,16 +40,28 @@ onMounted(() => {
   z-index: 2;
   color: var(--primary);
   box-shadow: 4px 4px 8px 0 rgba(var(--dark), 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 50%;
+  height: 50%;
+  fill: var(--primary);
+  transition: transform 0.2s ease-in-out;
+
 }
 
 button#to-top:hover {
-  background-color: var(--dark-off);
+  background-color: rgba(var(--secondary-rgba), 0.48);
   transition: background-color 0.2s ease-in-out;
 }
 
 button#to-top:hover svg {
-  transform: scale(1.3);
+  transform: scale(1.2);
   transition: transform 0.2s ease-in-out;
+  color: var(--secondary);
 }
 
 @media (width < 1500px) {
