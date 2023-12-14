@@ -1,13 +1,9 @@
-<script setup>
-
-</script>
-
 <template>
 
   <div class="signature">
     <div class="signature-text">
       <p>Developed with </p>
-      <p class="names"> by <a href="">Daniel</a> & <a href="">Linus</a></p>
+      <p class="names"> by <a target="_blank" href="https://github.com/Daanieeel">Daniel</a> & <a target="_blank" href="https://github.com/LxiniG">Linus</a></p>
     </div>
     <img class="red-heart" src="@/assets/images/red-heart.png" alt="Herz">
   </div>
@@ -17,12 +13,11 @@
 <style scoped>
 .signature {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: var(--white);
+  background: var(--primary);
   border-radius: 15px;
-  color: var(--black);
+  color: var(--light);
   padding: 0.5rem 1rem;
   border: 2px solid rgba(0, 0, 0, 0.1);
 }
@@ -43,5 +38,10 @@
 
 .signature p.names {
   font-size: 0.7rem;
+}
+
+.white-names .signature-text p a {
+  color: var(--light);
+  text-decoration: underline;
 }
 </style>

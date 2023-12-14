@@ -33,13 +33,13 @@ onMounted(() => {
   bottom: 2rem;
   right: 2rem;
   cursor: pointer;
-  background-color: var(--background);
+  background-color: var(--secondary);
   border: none;
   outline: none;
   border-radius: 15px;
   z-index: 2;
-  color: var(--inversePrimary);
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: var(--primary);
+  box-shadow: 4px 4px 8px 0 rgba(var(--dark), 0.2);
 }
 
 @media (width < 1500px) {

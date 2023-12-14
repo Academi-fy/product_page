@@ -40,7 +40,7 @@
   border-radius: 100%;
   width: 1200px;
   height: 1200px;
-  background-color: #67578a;
+  background-color: #E45C5C;
   left: -50px;
   top: -100px;
   z-index: 3;
@@ -50,7 +50,7 @@
 .animated .two {
   width: 1500px;
   height: 1800px;
-  background-color: #99558d;
+  background-color: #BF9138;
   bottom: -30px;
   left: -80px;
 }
@@ -60,7 +60,7 @@
   height: 100%;
   bottom: 0;
   right: -800px;
-  background-color: #E45C5C;
+  background-color: #AECAC5;
   animation: flyPlus 10s linear infinite;
   -webkit-animation: flyPlus 10s linear infinite;
   transform: rotate(0) translate(200px) rotate(0);
@@ -76,7 +76,7 @@
   margin: auto;
   bottom: 0;
   right: 0;
-  background-color: #3f5275;
+  background-color: #2E73A7;
   animation: flyPlus 15s linear infinite;
   -webkit-animation: flyPlus 15s linear infinite;
   transform: rotate(0) translate(200px) rotate(0);

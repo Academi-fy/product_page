@@ -1,18 +1,17 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import Logo from "@/assets/Logo.vue";
 
-const scrollState = ref("transparent");
+const scrollY = ref(0);
+const isDarkMode = computed(() => window.matchMedia("(prefers-color-scheme: dark)").matches);
+const scrollState = computed(() => scrollY.value > 0 ? (isDarkMode.value ? "rgba(0, 0, 0, 0.3)" : "rgba(255, 255, 255, 0.3)") : "transparent");
+const linkColor = computed(() => scrollY.value > 0 ? "var(--secondary)" : "var(--light)");
 
 onMounted(() => {
   window.addEventListener("scroll", () => {
-    if(window.scrollY > 0){
-      scrollState.value = "var(--background)";
-    } else {
-      scrollState.value = "transparent";
-    }
+    scrollY.value = window.scrollY;
   });
-})
+});
 </script>
 
 <template>
@@ -20,14 +19,14 @@ onMounted(() => {
   <nav>
     <a href="#" class="logo-wrapper">
       <Logo/>
-      <p>Academi.fy</p>
+      <p id="logo-description">Academi.fy</p>
     </a>
     
     <ul>
-      <li><a href="#login">Login</a></li>
-      <li><a href="#chats">Chats</a></li>
-      <li><a href="#blackboards">Blackboards</a></li>
-      <li><a href="#events">Events</a></li>
+      <li><a class="nav-link" href="#ueberblick">Überblick</a></li>
+      <li><a class="nav-link" href="#web-untis">WebUntis</a></li>
+      <li><a class="nav-link" href="#blackboards">Blackboards</a></li>
+      <li><a class="nav-link" href="#events">Events</a></li>
     </ul>
 
   </nav>
@@ -39,12 +38,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 9vh;
   width: 100%;
   position: fixed;
   background-color: v-bind(scrollState);
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   padding: 0 2rem;
+  z-index: 10;
+  backdrop-filter: blur(20px);
 }
 
 nav ul {
@@ -68,13 +69,14 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--inversePrimary);
-  font-size: 1.3rem;
+  color: v-bind(linkColor);
+  font-size: 1.2rem;
+  font-weight: normal;
 }
 
 #logo {
-  height: 5vh;
-  width: 5vh;
+  height: 4vh;
+  width: 4vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,14 +92,13 @@ nav ul li a {
 
 .logo-wrapper p {
   text-decoration: none;
-  color: var(--inversePrimary);
-  font-size: 1.5rem;
+  color: v-bind(linkColor);
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
 nav a:hover {
   background: none;
-  color: var(--inversePrimary);
+  color: var(--accent) !important;
 }
-
 </style>

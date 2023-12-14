@@ -1,30 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
-/* semantic color variables for this project */
 :root {
-  --white: #E4E4E4;
-  --black: #141414;
-  --background: #E4E4E4;
-  --primary: #F2F1F6;
-  --onPrimary: #808080;
-  --outline: #D2D2D2;
-  --inversePrimary: #141414;
-  --onBackground: #979797;
-  --highlight:#E45C5C;
+
+  --accent: #E45C5C;
+
+  --light: #FBFBFB;
+  --light-off: #ECECEC;
+  --light-off-lighter: #F5F5F5;
+  --light-rgba: 251, 251, 251;
+  --light-off-rgba: 236, 236, 236;
+
+  --dark: #171717;
+  --dark-off: #2C2C2C;
+  --dark-off-darker: #1e1e1e;
+  --dark-rgba: 23, 23, 23;
+  --dark-off-rgba: 44, 44, 44;
+
+}
+
+:root {
+
+  --primary: var(--light);
+  --primary-off: var(--light-off);
+  --primary-off-2: var(--light-off-lighter);
+  --primary-rgba: var(--light-rgba);
+
+  --secondary: var(--dark);
+  --secondary-off: var(--dark-off);
+  --secondary-off-2: var(--dark-off-darker);
+  --secondary-rgba: var(--dark-rgba);
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #141414;
-    --primary: #141414;
-    --onPrimary: #807F87;
-    --outline: #222222;
-    --inversePrimary: #E4E4E4;
-    --onBackground: #464646;
-    --highlight:#E45C5C;
+
+    --primary: var(--dark);
+    --primary-off: var(--dark-off);
+    --primary-off-2: var(--dark-off-darker);
+    --primary-rgba: var(--dark-rgba);
+
+    --secondary: var(--light);
+    --secondary-off: var(--light-off);
+    --secondary-off-2: var(--light-off-lighter);
+    --secondary-rgba: var(--light-rgba);
+
   }
 }
+
 
 *,
 *::before,
@@ -37,7 +61,7 @@
 
 body {
   min-height: 100vh;
-  background: var(--background);
+  background: var(--primary);
   transition:
     color 0.5s,
     background-color 0.5s;
