@@ -42,6 +42,16 @@ onMounted(() => {
   box-shadow: 4px 4px 8px 0 rgba(var(--dark), 0.2);
 }
 
+button#to-top:hover {
+  background-color: var(--dark-off);
+  transition: background-color 0.2s ease-in-out;
+}
+
+button#to-top:hover svg {
+  transform: scale(1.3);
+  transition: transform 0.2s ease-in-out;
+}
+
 @media (width < 1500px) {
   #to-top {
     bottom: 1rem;

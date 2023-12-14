@@ -44,7 +44,7 @@
   left: -50px;
   top: -100px;
   z-index: 3;
-  animation: fly 12s linear infinite;
+  animation: fly 24s ease infinite;
   transform: rotate(0) translate(80px) rotate(0);
 }
 .animated .two {
@@ -61,8 +61,8 @@
   bottom: 0;
   right: -800px;
   background-color: #AECAC5;
-  animation: flyPlus 10s linear infinite;
-  -webkit-animation: flyPlus 10s linear infinite;
+  animation: flyPlus 20s linear infinite;
+  -webkit-animation: flyPlus 20s linear infinite;
   transform: rotate(0) translate(200px) rotate(0);
   -webkit-transform: rotate(0) translate(200px) rotate(0);
   -moz-transform: rotate(0) translate(00px) rotate(0);
@@ -77,8 +77,8 @@
   bottom: 0;
   right: 0;
   background-color: #2E73A7;
-  animation: flyPlus 15s linear infinite;
-  -webkit-animation: flyPlus 15s linear infinite;
+  animation: flyPlus 30s linear infinite;
+  -webkit-animation: flyPlus 30s linear infinite;
   transform: rotate(0) translate(200px) rotate(0);
   -webkit-transform: rotate(0) translate(200px) rotate(0);
   -moz-transform: rotate(0) translate(200px) rotate(0);
@@ -87,21 +87,49 @@
 }
 
 @keyframes fly {
-  100% {
+  0%{
+    transform: rotate(0) translate(80px) rotate(0);
+    -webkit-transform: rotate(0) translate(80px) rotate(0);
+    -moz-transform: rotate(0) translate(80px) rotate(0);
+    -ms-transform: rotate(0) translate(80px) rotate(0);
+    -o-transform: rotate(0) translate(80px) rotate(0);
+  }
+  50% {
     transform: rotate(2turn) translate(200px) rotate(-2turn);
     -webkit-transform: rotate(2turn) translate(200px) rotate(-2turn);
     -moz-transform: rotate(2turn) translate(200px) rotate(-2turn);
     -ms-transform: rotate(2turn) translate(200px) rotate(-2turn);
     -o-transform: rotate(2turn) translate(200px) rotate(-2turn);
   }
+  100%{
+    transform: rotate(0) translate(80px) rotate(0);
+    -webkit-transform: rotate(0) translate(80px) rotate(0);
+    -moz-transform: rotate(0) translate(80px) rotate(0);
+    -ms-transform: rotate(0) translate(80px) rotate(0);
+    -o-transform: rotate(0) translate(80px) rotate(0);
+  }
 }
 @keyframes flyPlus {
-  100% {
+  0%{
+    transform: rotate(0) translate(200px) rotate(0);
+    -webkit-transform: rotate(0) translate(200px) rotate(0);
+    -moz-transform: rotate(0) translate(200px) rotate(0);
+    -ms-transform: rotate(0) translate(200px) rotate(0);
+    -o-transform: rotate(0) translate(200px) rotate(0);
+  }
+  50% {
     transform: rotate(-2turn) translate(200px) rotate(2turn);
     -webkit-transform: rotate(-2turn) translate(200px) rotate(2turn);
     -moz-transform: rotate(-2turn) translate(200px) rotate(2turn);
     -ms-transform: rotate(-2turn) translate(200px) rotate(2turn);
     -o-transform: rotate(-2turn) translate(200px) rotate(2turn);
+  }
+  100%{
+    transform: rotate(0) translate(200px) rotate(0);
+    -webkit-transform: rotate(0) translate(200px) rotate(0);
+    -moz-transform: rotate(0) translate(200px) rotate(0);
+    -ms-transform: rotate(0) translate(200px) rotate(0);
+    -o-transform: rotate(0) translate(200px) rotate(0);
   }
 }
 </style>
