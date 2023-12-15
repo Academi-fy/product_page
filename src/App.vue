@@ -59,7 +59,7 @@ onUnmounted(() => {
 
     <section class="info" id="ueberblick">
 
-      <h2>Kleine <span class="cursive">Nachrichten</span>, große <span class="cursive">Ereignisse</span>: an einem Platz!</h2>
+      <h2>Kleine <span class="cursive">Nachrichten</span>, große <span class="cursive">Ereignisse</span>: ein Ort!</h2>
       <p>Erlebe Schule auf eine neue Art: Mit aktuellen Events, frischen Infos und Live-Chats bringen wir Schulgemeinschaft direkt auf deinen Bildschirm.</p>
 
       <div class="table">
@@ -184,7 +184,7 @@ onUnmounted(() => {
           </p>
           <p>
             Durch die individuellen <span class="cursive">Push-Benachrichtigungen</span> bleiben Interessierte stets auf dem Laufenden. Während Events können Abonnenten des Events durch Push-Benachrichtigungen
-            über Geschehnisse in <span class="cursive">Echtzeit</span> informiert werden. Außerdem gibt es eine Möglichkeit, Tickets bzw. Sitzplätze
+            über Geschehnisse in <span class="cursive">Echtzeit</span> informiert werden. Außerdem gibt es eine Möglichkeit, Tickets bzw. Sitzplätze.
           </p>
         </div>
       </div>
