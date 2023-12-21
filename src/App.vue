@@ -176,7 +176,7 @@ onUnmounted(() => {
     <section class="info" id="events">
 
       <div class="text-wrapper">
-        <h2>Kollaborativer Austausch: <span class="cursive">Events</span></h2>
+        <h2>Interaktive Gemeinschaft: <span class="cursive">Events</span></h2>
         <div class="paragraphs">
           <p>
             "Anstehend diesen Monat: nachgefragt, Weihnachtskonzert, Turmblasen und vieles mehr!". Die praktischen Events von Academi.fy bieten eine Plattform
