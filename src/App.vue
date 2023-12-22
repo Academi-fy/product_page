@@ -287,6 +287,7 @@ section.info:not(#welcome) {
 #welcome .signature{
   background-color: rgba(255, 255, 255, .15);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: none;
 }
 
@@ -489,7 +490,7 @@ section#events  {
     font-size: 2rem;
   }
 
-  section {
+  section:not(#welcome) {
     padding: 3rem !important;
   }
 
