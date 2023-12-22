@@ -132,4 +132,12 @@
     -o-transform: rotate(0) translate(200px) rotate(0);
   }
 }
+
+.animated .wrapper {
+  height: 100%;
+}
+.animated .one, .animated .two, .animated .three, .animated .four {
+  height: 100%;
+}
+
 </style>
