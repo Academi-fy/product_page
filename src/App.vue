@@ -109,7 +109,7 @@ onUnmounted(() => {
 
     </section>
 
-    <section class="info" id="web-untis">
+    <section class="info mockup" id="web-untis">
 
       <div class="web-untis section login">
         <div class="text-wrapper">
@@ -154,7 +154,7 @@ onUnmounted(() => {
       </div>
 
     </section>
-    <section class="info" id="blackboards">
+    <section class="info mockup" id="blackboards">
 
       <div class="text-wrapper">
         <h2>Kollaborativer Austausch: <span class="cursive">Blackboards</span></h2>
@@ -173,7 +173,7 @@ onUnmounted(() => {
       <img src="@/assets/images/mockup-blackboard-view.png" alt="Handy mit der Login Seite von Academi.fy">
 
     </section>
-    <section class="info" id="events">
+    <section class="info mockup" id="events">
 
       <div class="text-wrapper">
         <h2>Interaktive Gemeinschaft: <span class="cursive">Events</span></h2>
@@ -198,6 +198,10 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+section:not(section:first-of-type) {
+  scroll-margin-top: 9svh;
+}
+
 .chevron-button:hover {
   transform: scale(2);
 }
@@ -225,14 +229,19 @@ section.info{
   color: var(--secondary);
 }
 
+section.mockup img {
+  max-height: 500px;
+  object-fit: contain;
+}
+
 section.info:not(#welcome) {
   align-items: center;
 }
 
 #welcome{
-  min-height: 150svh;
   height: fit-content;
   display: flex;
+  min-height: 100svh;
 }
 
 #welcome .cursive {
@@ -382,8 +391,6 @@ section.info:not(#welcome) {
 }
 
 .web-untis.section img {
-  object-fit: contain;
-  max-height: 600px;
   filter: drop-shadow(30px 30px 30px rgba(var(--secondary-rgba), 0.3));
   transition: margin-top 0.8s ease;
 }
@@ -426,8 +433,6 @@ section:not(#welcome, #ueberblick, #web-untis) {
 }
 
 section:not(#welcome, #ueberblick, #web-untis) img {
-  object-fit: contain;
-  max-height: 600px;
   filter: drop-shadow(30px 30px 30px rgba(var(--secondary-rgba), 0.3));
   transition: margin-top 0.8s ease;
 }
@@ -458,6 +463,78 @@ section:last-of-type {
 
 section#events  {
   flex-direction: row-reverse;
+}
+
+@media (max-width: 1300px) {
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  section.info.mockup {
+    flex-direction: column !important;
+  }
+
+  #web-untis div {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 1100px) {
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 3rem !important;
+  }
+
+  #ueberblick .table {
+    grid-template-columns: 1fr;
+  }
+
+  #ueberblick .table-item .item-heading {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  #ueberblick .table-item p {
+    text-align: justify;
+  }
+
+  #web-untis .section img {
+    max-width: 90%;
+  }
+
+  section.mockup img {
+    max-width: 90%;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #web-app-chat-view {
+    display: none;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  #welcome .content-wrapper .text-wrapper p {
+    text-align: center;
+  }
+
 }
 
 </style>

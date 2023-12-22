@@ -38,7 +38,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9vh;
+  height: 9svh;
   width: 100%;
   position: fixed;
   background-color: v-bind(scrollState);
